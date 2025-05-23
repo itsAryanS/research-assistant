@@ -1,12 +1,11 @@
 streamlit
-langchain
+langchain==0.0.350     # ✅ PIN THIS VERSION
 langchain-community
 langchain-groq
 groq
 faiss-cpu
 PyPDF2
-pypdf          # ✅ ADD THIS LINE
+pypdf
 tiktoken
 python-dotenv
 sentence-transformers
-
