@@ -5,6 +5,8 @@ langchain-groq
 groq
 faiss-cpu
 PyPDF2
+pypdf          # ✅ ADD THIS LINE
 tiktoken
 python-dotenv
 sentence-transformers
+
