@@ -1,5 +1,5 @@
 streamlit
-langchain==0.0.350     # ✅ PIN THIS VERSION
+langchain==0.0.350
 langchain-community
 langchain-groq
 groq
