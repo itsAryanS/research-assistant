@@ -9,3 +9,4 @@ pypdf
 tiktoken
 python-dotenv
 sentence-transformers
+torch==2.1.0
