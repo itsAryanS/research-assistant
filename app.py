@@ -28,7 +28,8 @@ if uploaded_file:
     with st.spinner("Processing PDF..."):
         docs = load_and_split_pdf(file_path)
         vectorstore = create_vectorstore(docs)
-        st.session_state.chain = get_conversational_chain(vectorstore)
+        retriever = vectorstore.as_retriever()  # ✅ create retriever here
+        st.session_state.chain = get_conversational_chain(retriever)
         st.success("✅ PDF processed! Ask your question below.")
 
 if st.session_state.chain:
