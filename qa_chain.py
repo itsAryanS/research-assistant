@@ -1,6 +1,7 @@
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
-from langchain_community.llms.groq import ChatGroq
+from langchain_groq import ChatGroq
+
 from config import GROQ_API_KEY, GROQ_MODEL
 
 def get_conversational_chain(retriever):
