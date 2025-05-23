@@ -4,11 +4,6 @@ from langchain_groq import ChatGroq
 from config import GROQ_API_KEY, GROQ_MODEL
 
 def get_conversational_chain(retriever):
-    """
-    Returns a LangChain Q&A chain using Groq's Mixtral LLM and a retriever.
-    """
-    memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
-
     llm = ChatGroq(
         api_key=GROQ_API_KEY,
         model_name=GROQ_MODEL,
@@ -17,10 +12,10 @@ def get_conversational_chain(retriever):
 
     chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
-        retriever=retriever,
-        memory=memory,
+        retriever=retriever,  # ✅ this MUST be a retriever, not vectorstore
         return_source_documents=True,
         verbose=True
     )
 
     return chain
+
